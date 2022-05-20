@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0%;
+            text-align: center;
+        } 
+        h1{
+            height: 4vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: white;
+            font-size: 2vw;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgb(39, 78, 248);
+            text-align: center;
+            align-items: center;
+            margin: 0;
+        }
+        .search{
+            position:absolute;
+            right: 0;
+            padding-right: 20px;
+        }
+        .bar{
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            align-content:flex-end;
+            position:sticky;
+            top: 0;
+            float:initial ;
+            margin: 0;
+            width:100vw;
+            height:fit-content;
+            color: rgb(39, 78, 248) ;
+            background-color: white;
+            flex-wrap: wrap;
+            padding-top: .5vw;
+            padding-bottom: 1vw;
+        } 
+        .bar div.nav{
+            color: black;
+            cursor: pointer;
+            padding-left: 2.5vw;
+            padding-top: .5vw;
+            padding-right: 2.5vw;
+            text-decoration: none;
+        }
+       /* .bar input{
+            border-radius: 10px;
+            padding-top: .75vw;
+            padding-bottom: .50vw;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            border: 1px;
+            color: black;
+
+        }*/
+        .nav figcaption:hover{
+            font-weight: bold;
+            color:rgb(0, 47, 255) ;
+
+        }
+        .nav img{
+            margin: 0;
+            width: 4.5vw;
+        }
+        .main{
+             padding-top: .75vw;
+             display: grid;
+             background-color: antiquewhite;
+             border: 5px rgb(0, 0, 0) ;
+             grid-gap:10px;
+             grid-template-areas:
+             "i1 i2 i2 i2 i3";
+        }
+        .button{
+            text-align: left;
+            width:fit-content;
+            background-color: white;
+            border: 1vw white;
+            font-size: 1.3vw;
+            font-family:Georgia;
+       }
+        .button:hover{
+            cursor: pointer;
+            background-color: rgb(0, 47, 255);
+            color: white;
+            
+        }
+        .i1{
+            display: flex;
+            flex-direction: column;
+            padding-top: 1vw;
+            padding-right:1vw ;
+            padding-left: .5vw;
+            background-color: white;
+            text-align: left;
+            grid-area: i1;
+            /*height:max-content;*/
+        }
+        .i2{
+            font-size: 1.3vw;
+            background-color: aquamarine;
+            text-align: center;
+            grid-area: i2;
+        }
+        .i3{
+            font-size: 1.3vw;
+            background-color: cadetblue;
+            text-align: center;
+            grid-area: i3;
+        }
+        figcaption{
+            font-family:Helvetica;
+            font-size: 1vw;
+        }
+        .wraper{
+            display: flex;
+        }
+        .wraper>div {
+            font-size: 4vh;
+            color: white;
+            background: chocolate;
+            margin: .1em;
+            padding: .3em;
+            border-radius: 3px;
+            flex: 1;
+         }
+         .wraper .wraper{
+          flex-direction: column;
+         }
+         .wraper .wraper>div{
+          flex-direction: row;
+         }
+         .wraper .wraper .wraper>div {
+             background: beige;
+             color:chocolate ;
+         }
+
+
+    </style>
+    <title>Flipkart</title>
+</head>
+<body>
+     <h1>
+         <img class="img" src="img/flipkart.png" alt="" width="25vw" height="25vw">
+         Flipkart.com
+     </h1>
+     <nav class="bar">
+        <div class="nav">
+            <img src="img/top.webp" alt="">
+            <figcaption>Top Offers</figcaption>
+        </div>
+        <div class="nav">
+            <img src="img/grocery.webp" alt="">
+            <figcaption>Grocery</figcaption>
+        </div>
+        <div class="nav">
+            <img src="img/mobiles.webp" alt="">
+            <figcaption>Mobiles</figcaption>
+        </div>
+        <div class="nav">
+            <img src="img/fasion.webp" alt="">
+            <figcaption>Fashion</figcaption>
+        </div>
+        <div class="nav">
+            <img src="img/ele.webp" alt="">
+            <figcaption>Electronics</figcaption>
+        </div>
+        <div class="nav">
+            <img src="img/home.webp" alt="">
+            <figcaption>Home</figcaption>
+        </div>
+        <div class="nav">
+            <img src="img/app.webp" alt="">
+            <figcaption>Applications</figcaption>
+        </div>
+        <div class="nav">
+            <img src="img/travel.webp" alt="">
+            <figcaption>Travel</figcaption>
+        </div>
+        <div class="nav">
+            <img src="img/toys.webp" alt="">
+            <figcaption>Beauty, Toys & More</figcaption>
+        </div>
+      <!--   <div class="search">
+         <img  type="submit" src="download.png" height="15px" width="15px">
+         <input type="text" title="Search for products, brands and more" name="q" autocomplete="off" placeholder="Search for products, brands and more" value="">
+        </div>-->
+     </nav>
+    <div class="main">
+         <div class="i1">
+                 <button class="button">Men</button>
+                 <button class="button"> Women</button>
+                 <button class="button">Men & Women</button>
+                 <button class="button">Boys & Girls</button>
+                 <button class="button">Baby Boys & Baby Girls</button>
+                 <button class="button">Baby Girls</button>
+                 <button class="button">Baby Boys</button>
+                 <button class="button">Unisex</button>
+                 <button class="button">Couple</button>
+                 <button class="button">BabyBoysBabyGirls</button>
+         </div>
+             
+         <div class="i2">
+            <div class="wraper">
+                <div class="wraper">Hello world
+                    <br>
+                     <div class="wraper">
+                       <div>1</div>
+                       <div>2</div>
+                       <div>3</div>
+                     </div>
+                     <div class="wraper">
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                     </div>
+                     <div class="wraper">
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                     </div>
+                     </div> 
+                     <div>Hello you</div>
+                     <div>Hello india</div>
+            </div>
+         </div>
+         <div class="i3">
+            <div class="wraper">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <div class="wraper">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+            </div>
+            <div class="wraper">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+            </div>
+         </div>
+    </div>
+</body>
+</html>
